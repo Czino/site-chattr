@@ -3,7 +3,13 @@ import { useEffect, useState } from 'react'
 
 export const useCustomNdk = () => {
     const [customNdk, setCustomNdk] = useState<NDK>(
-        new NDK({}),
+        new NDK({
+            explicitRelayUrls: [
+                'wss://nostr-pub.wellorder.net/',
+                'wss://nostr.bitcoiner.social',
+                'wss://relay.damus.io/',
+            ],
+        }),
     )
 
     useEffect(() => {

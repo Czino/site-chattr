@@ -6,6 +6,11 @@ import { getDomain } from './helpers/getDomain'
 const opts = {
     closeOnEose: false,
 }
+const relays = [
+    'wss://nostr-pub.wellorder.net/',
+    'wss://nostr.bitcoiner.social',
+    'wss://relay.damus.io/',
+]
 type Props = {
     url: string
 }
@@ -25,6 +30,7 @@ export const Events = ({ url }: Props) => {
     const { events, eose } = useSubscribe({
         filters,
         opts,
+        relays,
         enabled: !!url,
         fetchProfiles: true,
     })
