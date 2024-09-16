@@ -1,5 +1,4 @@
 import { NDKEvent } from '@nostr-dev-kit/ndk'
-import React from 'react'
 import { useIsSelf } from '../hooks/useIsSelf'
 
 const DEFAULTS = {
