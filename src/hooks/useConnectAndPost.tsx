@@ -1,16 +1,18 @@
-'use client'
 import { useNewEvent } from 'nostr-hooks'
+import { useCallback } from 'react'
+import { getDomain } from '../helpers/getDomain'
 
 type Props = {
     content: string
-    domain: string
     url: string
+    onSuccess?: () => void
 }
-export const usePostMessage = ({ content, domain, url }: Props) => {
+export const usePostMessage = ({ content, url, onSuccess }: Props) => {
     const { createNewEvent } = useNewEvent()
 
-    const handlePublish = async () => {
+    const handlePublish = useCallback(async () => {
         const event = createNewEvent()
+        const domain = getDomain(url)
         event.content = content
         event.kind = 1111
         event.tags = [
@@ -21,7 +23,9 @@ export const usePostMessage = ({ content, domain, url }: Props) => {
             ['k', `r:${domain}`],
         ]
         event.sign()
-        event.publish()
-    }
+        await event.publish()
+        if (onSuccess) onSuccess()
+    }, [createNewEvent, url, content, onSuccess])
+
     return handlePublish
 }

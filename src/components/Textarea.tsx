@@ -1,4 +1,3 @@
-'use client'
 import { ChangeEvent, TextareaHTMLAttributes } from 'react'
 
 type Props = TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -12,7 +11,10 @@ export const Textarea = ({ onTextChange, ...props }: Props) => {
         <textarea
             {...props}
             onChange={handleChange}
-            className="resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink-0"
+            className={[
+                'resize-none border border-gray-300 rounded-md p-2 flex-shrink-0',
+                'focus:outline-none focus:ring-2 focus:ring-blue-500',
+            ].join(' ')}
         />
     )
 }

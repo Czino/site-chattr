@@ -1,12 +1,6 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
-    content: [
-        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-    darkMode: 'class', // Enable dark mode
+const config = {
+    content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
@@ -31,8 +25,8 @@ const config: Config = {
     },
     variants: {
         extend: {
-            backgroundColor: ['dark'], // Enable dark mode variants
-            textColor: ['dark'], // Enable dark mode variants
+            backgroundColor: ['dark'],
+            textColor: ['dark'],
         },
     },
     plugins: [],

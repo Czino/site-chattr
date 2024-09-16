@@ -1,12 +1,16 @@
-'use client'
 import { useState } from 'react'
+import { usePostMessage } from '../hooks/useConnectAndPost'
 import { Textarea } from './Textarea'
-import { currentDomain, currentURL } from './page'
-import { usePostMessage } from './useConnectAndPost'
 
-export const MessageBox = () => {
+type Props = { url: string }
+export const MessageBox = ({ url }: Props) => {
     const [content, setContent] = useState('')
-    const postMessage = usePostMessage({ content, domain: currentDomain, url: currentURL })
+    const clearContent = () => setContent('')
+    const postMessage = usePostMessage({
+        content,
+        url,
+        onSuccess: clearContent,
+    })
 
     return (
         <>

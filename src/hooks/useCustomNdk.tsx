@@ -1,4 +1,3 @@
-'use client'
 import NDK from '@nostr-dev-kit/ndk'
 import { useEffect, useState } from 'react'
 

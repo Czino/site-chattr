@@ -1,6 +1,12 @@
 module.exports = {
     root: true,
-    extends: ['plugin:jest/recommended', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+    extends: [
+        'react-app',
+        'react-app/jest',
+        'plugin:jest/recommended',
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+    ],
     env: {
         'jest/globals': true,
     },
