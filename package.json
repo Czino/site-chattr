@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/Czino/site-chattr#readme",
   "dependencies": {
+    "jotai": "^2.9.3",
     "next": "14.2.11",
     "nostr-hooks": "^2.9.11",
     "react": "^18",

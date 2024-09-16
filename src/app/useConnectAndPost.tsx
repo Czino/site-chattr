@@ -1,17 +1,15 @@
 'use client'
-import { useNewEvent, useSigner } from 'nostr-hooks'
+import { useNewEvent } from 'nostr-hooks'
 
 type Props = {
     content: string
     domain: string
     url: string
 }
-export const useConnectAndPost = ({ content, domain, url }: Props) => {
+export const usePostMessage = ({ content, domain, url }: Props) => {
     const { createNewEvent } = useNewEvent()
-    const { signer } = useSigner()
 
-    const handlePublish = () => {
-        if (!signer) return
+    const handlePublish = async () => {
         const event = createNewEvent()
         event.content = content
         event.kind = 1111
@@ -22,7 +20,7 @@ export const useConnectAndPost = ({ content, domain, url }: Props) => {
             ['s', `r:${url}`],
             ['k', `r:${domain}`],
         ]
-        event.sign(signer)
+        event.sign()
         event.publish()
     }
     return handlePublish

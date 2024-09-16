@@ -1,9 +1,18 @@
 'use client'
-import { TextareaHTMLAttributes } from 'react'
+import { ChangeEvent, TextareaHTMLAttributes } from 'react'
 
-export const Textarea = (props: TextareaHTMLAttributes<HTMLTextAreaElement>) => (
-    <textarea
-        {...props}
-        className="resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink-0"
-    />
-)
+type Props = TextareaHTMLAttributes<HTMLTextAreaElement> & {
+    onTextChange?: (value: string) => void
+}
+export const Textarea = ({ onTextChange, ...props }: Props) => {
+    const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+        if (onTextChange) onTextChange(event.target.value)
+    }
+    return (
+        <textarea
+            {...props}
+            onChange={handleChange}
+            className="resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink-0"
+        />
+    )
+}
