@@ -14,6 +14,7 @@ const relays = [
 type Props = {
     url: string
 }
+
 const GENERIC_COMMENT_KIND = 1111
 export const Events = ({ url }: Props) => {
     const filters = useMemo(
@@ -35,7 +36,8 @@ export const Events = ({ url }: Props) => {
         fetchProfiles: true,
     })
 
-    if (!eose) return <div>Fetching messages...</div>
+    if (!eose) return <div className="text-center text-purple-300">Fetching messages...</div>
+    if (events.length === 0) return <div className="text-center text-purple-300">No messages yet</div>
 
     return (
         <ul className="flex flex-col-reverse w-full gap-4">
