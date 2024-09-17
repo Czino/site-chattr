@@ -5,6 +5,7 @@ const DEFAULTS = {
     USER_NAME: 'Anon',
 }
 const MS_PER_S = 1000
+const GATEWAY = 'https://njump.me/'
 export const Event = ({ event }: { event: NDKEvent }) => {
     const isSelf = useIsSelf()
 
@@ -15,7 +16,11 @@ export const Event = ({ event }: { event: NDKEvent }) => {
                 isSelf(event.author.pubkey) ? 'bg-highlight' : 'bg-purple-100',
             ].join(' ')}
         >
-            <div className="flex gap-1 items-center leading-5">
+            <a className="flex gap-1 items-center leading-5"
+                href={GATEWAY + event.author.npub}
+                target="_blank"
+                rel="noreferrer"
+            >
                 {event.author.profile?.image ? (
                     <img src={event.author.profile?.image} alt="" className="w-5 h-5 rounded-full" />
                 ) : (
@@ -27,7 +32,7 @@ export const Event = ({ event }: { event: NDKEvent }) => {
                         {new Date(event.created_at * MS_PER_S).toLocaleString()}
                     </p>
                 )}
-            </div>
+            </a>
             <p>{event.content}</p>
         </li>
     )
