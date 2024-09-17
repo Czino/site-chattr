@@ -23,7 +23,9 @@ export const Event = ({ event }: { event: NDKEvent }) => {
                 )}
                 <p className="font-bold">{event.author.profile?.displayName || DEFAULTS.USER_NAME}</p>
                 {!!event.created_at && (
-                    <p className="text-purple-400 text-xs">{new Date(event.created_at * MS_PER_S).toLocaleString()}</p>
+                    <p className="text-purple-400 text-xs">
+                        {new Date(event.created_at * MS_PER_S).toLocaleString()}
+                    </p>
                 )}
             </div>
             <p>{event.content}</p>

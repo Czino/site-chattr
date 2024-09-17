@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:host, :root {
   --purple-50: #f5f3ff;
   --purple-100: #e0e7ff;
   --purple-200: #A77BCA;
@@ -19,7 +19,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :host, :root {
     --purple-50: #4B1F6D;
     --purple-100: #4B1F6D;
     --purple-200: #4B1F6D;
@@ -35,10 +35,8 @@
   }
 }
 
-body {
+#site-chattr, body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  width: 300px;
-  height: 500px;
 }

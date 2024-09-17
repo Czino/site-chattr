@@ -3,12 +3,29 @@
   "name": "SiteChattr",
   "description": "A browser plugin to add a chatroom to any web page powered by the nostr protocol",
   "version": "1.0",
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "activeTab", "scripting"],
   "action": {
-    "default_popup": "index.html",
     "default_icon": "SiteChattr.png"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html", "static/js/*", "static/css/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
-  }
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
 }

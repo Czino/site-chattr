@@ -2,6 +2,13 @@
   "name": "site-chattr",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "serve:build": "serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@nostr-dev-kit/ndk": "^2.10.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -11,6 +18,7 @@
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
+    "events": "^3.3.0",
     "jotai": "^2.9.3",
     "nostr-hooks": "^2.9.11",
     "react": "^18.3.1",
@@ -22,13 +30,6 @@
     "@nostr-dev-kit/ndk": {
       "tseep": "npm:eventemitter3@5.0.1"
     }
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "serve:build": "serve -s build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
