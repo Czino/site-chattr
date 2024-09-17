@@ -15,15 +15,21 @@ type Props = {
     url: string
 }
 
+const NIP_01 = 1
 const GENERIC_COMMENT_KIND = 1111
 export const Events = ({ url }: Props) => {
     const filters = useMemo(
         () => [
             {
+                kinds: [NIP_01],
+                '#r': [url],
+            },
+            {
                 kinds: [GENERIC_COMMENT_KIND],
                 '#S': [`r:${url}`],
                 '#K': [`r:${getDomain(url)}`],
             },
+
         ],
         [url],
     )
