@@ -9,6 +9,7 @@ const toggle = () => {
     sidebar.style.height = '100%'
     sidebar.style.zIndex = '9999'
     sidebar.style.boxShadow = 'rgba(0, 0, 0, 0.2) 0px 0px 50px'
+    sidebar.style.border = 'none'
     sidebar.src = chrome.runtime.getURL('index.html')
 
     document.body.appendChild(sidebar)
