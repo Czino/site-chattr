@@ -11,7 +11,6 @@ const toggle = () => {
     sidebar.style.boxShadow = 'rgba(0, 0, 0, 0.2) 0px 0px 50px'
     sidebar.src = chrome.runtime.getURL('index.html')
 
-    console.log('nostr?', window.nostr)
     document.body.appendChild(sidebar)
 }
 

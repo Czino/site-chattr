@@ -8,7 +8,7 @@ export const isLoggedInAtom = atom(false)
 
 export const Login = () => {
     const [, setIsLoggedIn] = useAtom(isLoggedInAtom)
-    const { loginFromLocalStorage, loginWithExtension, loginWithSecretKey } = useLogin()
+    const { loginFromLocalStorage, loginWithSecretKey } = useLogin()
     const createNewPrivateKey = () => {
         const newSigner = NDKPrivateKeySigner.generate()
         return newSigner.privateKey
