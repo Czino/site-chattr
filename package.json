@@ -7,6 +7,7 @@
         "build": "react-scripts build",
         "serve:build": "serve -s build",
         "test": "react-scripts test",
+        "test:ci": "react-scripts test --watchAll=false --ci",
         "lint": "eslint",
         "eject": "react-scripts eject"
     },
