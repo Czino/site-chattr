@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="grid grid-cols-1 gap-2"
+  >
+    <button
+      class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+    >
+      Create new user
+    </button>
+  </div>
+</DocumentFragment>
+`;

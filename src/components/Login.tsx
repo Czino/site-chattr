@@ -13,9 +13,7 @@ export const Login = () => {
         const newSigner = NDKPrivateKeySigner.generate()
         return newSigner.privateKey
     }
-    const onError = (e: unknown) => {
-        throw new Error(String(e))
-    }
+
     const { activeUser } = useActiveUser()
 
     useEffect(() => loginFromLocalStorage(), [loginFromLocalStorage])
@@ -28,12 +26,10 @@ export const Login = () => {
             {/* <Button onClick={() => loginWithExtension({ onError })}>Login with Extension</Button> */}
             {/* <Button onClick={() => loginWithRemoteSigner({ onError })}>Login with Remote Signer</Button> */}
             {/* <Button
-                onClick={() => loginWithSecretKey({ secretKey: prompt('Paste your secret here') || '', onError })}>
+                onClick={() => loginWithSecretKey({ secretKey: prompt('Paste your secret here') || '' })}>
                 Login with Secret Key
             </Button> */}
-            <Button onClick={() => loginWithSecretKey({ secretKey: createNewPrivateKey(), onError })}>
-                Create new user
-            </Button>
+            <Button onClick={() => loginWithSecretKey({ secretKey: createNewPrivateKey() })}>Create new user</Button>
         </div>
     )
 }

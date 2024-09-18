@@ -11,13 +11,6 @@
   },
   "dependencies": {
     "@nostr-dev-kit/ndk": "^2.10.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.108",
-    "@types/react": "^18.3.6",
-    "@types/react-dom": "^18.3.0",
     "events": "^3.3.0",
     "jotai": "^2.9.3",
     "nostr-hooks": "^2.9.11",
@@ -44,9 +37,23 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.108",
+    "@types/react": "^18.3.6",
+    "@types/react-dom": "^18.3.0",
     "@types/chrome": "^0.0.271",
     "postcss": "^8.4.47",
     "serve": "^14.2.3",
+    "snapshot-diff": "^0.10.0",
     "tailwindcss": "^3.4.11"
+  },
+  "jest": {
+    "resetMocks": false,
+    "transformIgnorePatterns": [
+      "node_modules/((?!nostr-hooks)/)"
+    ]
   }
 }

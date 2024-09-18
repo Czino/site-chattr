@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteChattr should render correctly when logged in 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col gap-4 h-full"
+  >
+    <header
+      class="p-2 text-center bg-purple-400"
+    >
+      <h1
+        class="text-purple-50"
+      >
+        SiteChattr
+      </h1>
+      <h2
+        class="overflow-x-auto text-purple-50"
+      >
+        localhost/
+      </h2>
+    </header>
+    <main
+      class="flex flex-col gap-4 p-2 h-full"
+    >
+      <div
+        class="overflow-auto flex-shrink h-full"
+      >
+        <div
+          class="text-center text-purple-300"
+        >
+          Fetching messages...
+        </div>
+      </div>
+      <textarea
+        class="resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        id="textarea"
+        placeholder="Your message..."
+      />
+      <button
+        class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+      >
+        Send
+      </button>
+    </main>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SiteChattr should render correctly when not logged in 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -26,17 +26,18 @@
+            class=\\"text-center text-purple-300\\"
+          >
+            Fetching messages...
+          </div>
+        </div>
+-       <div
+-         class=\\"grid grid-cols-1 gap-2\\"
+-       >
++       <textarea
++         class=\\"resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500\\"
++         id=\\"textarea\\"
++         placeholder=\\"Your message...\\"
++       />
+        <button
+          class=\\"bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark \\"
+        >
+-           Create new user
++         Send
+        </button>
+-       </div>
+      </main>
+    </div>
+  </DocumentFragment>"
+`;

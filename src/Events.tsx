@@ -6,11 +6,7 @@ import { getURLOrigin } from './helpers/getURLOrigin'
 const opts = {
     closeOnEose: false,
 }
-const relays = [
-    'wss://nostr-pub.wellorder.net/',
-    'wss://nostr.bitcoiner.social',
-    'wss://relay.damus.io/',
-]
+const relays = ['wss://nostr-pub.wellorder.net/', 'wss://nostr.bitcoiner.social', 'wss://relay.damus.io/']
 type Props = {
     url: string
 }
@@ -29,7 +25,6 @@ export const Events = ({ url }: Props) => {
                 '#S': [`r:${url}`],
                 '#K': [`r:${getURLOrigin(url)}`],
             },
-
         ],
         [url],
     )
@@ -46,7 +41,7 @@ export const Events = ({ url }: Props) => {
     if (events.length === 0) return <div className="text-center text-purple-300">No messages yet</div>
 
     return (
-        <ul className="flex flex-col-reverse w-full gap-4">
+        <ul className="flex flex-col-reverse gap-4 w-full">
             {events.map((event) => (
                 <Event key={event.id} event={event} />
             ))}

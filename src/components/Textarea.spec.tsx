@@ -8,9 +8,13 @@ describe('Textarea', () => {
         const { asFragment } = render(<Textarea className="mt-4" value="Text" onTextChange={onTextChange} />)
         expect(asFragment()).toMatchSnapshot()
     })
-    it('should call onTextChange handler on text change', () => {
-        render(<Textarea className="mt-4" placeholder="Your message..." onTextChange={onTextChange} />)
-        userEvent.type(screen.getByPlaceholderText('Your message...'), 'a message')
+    it('should call onTextChange handler on text change', async () => {
+        render(<Textarea placeholder="Your message..." onTextChange={onTextChange} />)
+        await userEvent.type(screen.getByPlaceholderText('Your message...'), 'a message')
         expect(onTextChange).toHaveBeenCalledWith('a message')
+    })
+    it('should do nothing if onTextChange handler not given', async () => {
+        render(<Textarea placeholder="Your message..." />)
+        await userEvent.type(screen.getByPlaceholderText('Your message...'), 'a message')
     })
 })

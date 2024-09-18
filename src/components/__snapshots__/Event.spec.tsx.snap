@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event should highlight event if note is from active user 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1,12 +1,12 @@
+  <DocumentFragment>
+    <li
+-     class=\\"w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-highlight\\"
++     class=\\"w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-purple-100\\"
+    >
+      <a
+        class=\\"flex gap-1 items-center leading-5\\"
+-       href=\\"https://njump.me/npub1c3rvjlst8gh4u8fnhfqxvna80vpmpt7t495ymt600yj6ar6udlsq60swvh\\"
++       href=\\"https://njump.me/npub1xunyx3crpkgem3nntqudrrg5pnp329q27p5yz59ggccc7lq604vsan554l\\"
+        rel=\\"noreferrer\\"
+        target=\\"_blank\\"
+      >
+        <div
+          class=\\"w-5 h-5 bg-purple-400 rounded-full\\"
+@@ -17,13 +17,13 @@
+          Anon
+        </p>
+        <p
+          class=\\"text-xs text-purple-400\\"
+        >
+-         9/18/2024, 12:04:39 PM
++         9/17/2024, 4:47:01 PM
+        </p>
+      </a>
+      <p>
+-       I develop almost all my apps here!
++       Home sweet home
+      </p>
+    </li>
+  </DocumentFragment>"
+`;
+
+exports[`Event should render correctly 1`] = `
+<DocumentFragment>
+  <li
+    class="w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-purple-100"
+  >
+    <a
+      class="flex gap-1 items-center leading-5"
+      href="https://njump.me/npub1xunyx3crpkgem3nntqudrrg5pnp329q27p5yz59ggccc7lq604vsan554l"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <div
+        class="w-5 h-5 bg-purple-400 rounded-full"
+      />
+      <p
+        class="font-bold"
+      >
+        Anon
+      </p>
+      <p
+        class="text-xs text-purple-400"
+      >
+        9/17/2024, 4:47:01 PM
+      </p>
+    </a>
+    <p>
+      Home sweet home
+    </p>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`Event should render profile image 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -6,14 +6,12 @@
+        class=\\"flex gap-1 items-center leading-5\\"
+        href=\\"https://njump.me/npub1xunyx3crpkgem3nntqudrrg5pnp329q27p5yz59ggccc7lq604vsan554l\\"
+        rel=\\"noreferrer\\"
+        target=\\"_blank\\"
+      >
+-       <img
+-         alt=\\"\\"
+-         class=\\"w-5 h-5 rounded-full\\"
+-         src=\\"url/to/image.png\\"
++       <div
++         class=\\"w-5 h-5 bg-purple-400 rounded-full\\"
+        />
+        <p
+          class=\\"font-bold\\"
+        >
+          Anon"
+`;

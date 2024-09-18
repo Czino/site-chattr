@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageBox should publish event and clear text after 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1,13 +1,11 @@
+  <DocumentFragment>
+    <textarea
+      class=\\"resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500\\"
+      id=\\"textarea\\"
+      placeholder=\\"Your message...\\"
+-   >
+-     my comment!
+-   </textarea>
++   />
+    <button
+      class=\\"bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark \\"
+    >
+      Send
+    </button>"
+`;
+
+exports[`MessageBox should publish event and clear text after 2`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`MessageBox should render correctly 1`] = `
+<DocumentFragment>
+  <textarea
+    class="resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    id="textarea"
+    placeholder="Your message..."
+  />
+  <button
+    class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+  >
+    Send
+  </button>
+</DocumentFragment>
+`;

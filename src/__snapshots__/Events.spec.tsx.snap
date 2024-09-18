@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events should render correctly when no messages could be fetched 1`] = `
+<DocumentFragment>
+  <div
+    class="text-center text-purple-300"
+  >
+    No messages yet
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Events should render correctly while fetching 1`] = `
+<DocumentFragment>
+  <div
+    class="text-center text-purple-300"
+  >
+    Fetching messages...
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Events should render messages 1`] = `
+<DocumentFragment>
+  <ul
+    class="flex flex-col-reverse gap-4 w-full"
+  >
+    <li
+      class="w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-purple-100"
+    >
+      <a
+        class="flex gap-1 items-center leading-5"
+        href="https://njump.me/npub1xunyx3crpkgem3nntqudrrg5pnp329q27p5yz59ggccc7lq604vsan554l"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div
+          class="w-5 h-5 bg-purple-400 rounded-full"
+        />
+        <p
+          class="font-bold"
+        >
+          Anon
+        </p>
+        <p
+          class="text-xs text-purple-400"
+        >
+          9/17/2024, 4:47:01 PM
+        </p>
+      </a>
+      <p>
+        Home sweet home
+      </p>
+    </li>
+    <li
+      class="w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-highlight"
+    >
+      <a
+        class="flex gap-1 items-center leading-5"
+        href="https://njump.me/npub1c3rvjlst8gh4u8fnhfqxvna80vpmpt7t495ymt600yj6ar6udlsq60swvh"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div
+          class="w-5 h-5 bg-purple-400 rounded-full"
+        />
+        <p
+          class="font-bold"
+        >
+          Anon
+        </p>
+        <p
+          class="text-xs text-purple-400"
+        >
+          9/18/2024, 12:04:39 PM
+        </p>
+      </a>
+      <p>
+        I develop almost all my apps here!
+      </p>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
