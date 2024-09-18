@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export const useCurrentUrl = () => {
-    const [currentUrl, setCurrentUrl] = useState(window.location.href || 'localhost')
+    const [currentUrl, setCurrentUrl] = useState(window.location.href)
 
     useEffect(() => {
         if (typeof chrome === 'undefined' || !chrome?.tabs) return
