@@ -16,11 +16,11 @@ export const usePostMessage = ({ content, url, onSuccess }: Props) => {
         event.content = content
         event.kind = 1111
         event.tags = [
-            ['S', `r:${url}`],
-            ['K', `r:${domain}`],
+            ['S', `${url}`],
+            ['K', `${domain}`],
 
-            ['s', `r:${url}`],
-            ['k', `r:${domain}`],
+            ['s', `${url}`],
+            ['k', `${domain}`],
         ]
         event.sign()
         await event.publish()

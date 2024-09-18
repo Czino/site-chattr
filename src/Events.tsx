@@ -22,8 +22,8 @@ export const Events = ({ url }: Props) => {
             },
             {
                 kinds: [GENERIC_COMMENT_KIND],
-                '#S': [`r:${url}`],
-                '#K': [`r:${getURLOrigin(url)}`],
+                '#S': [`${url}`],
+                '#K': [`${getURLOrigin(url)}`],
             },
         ],
         [url],

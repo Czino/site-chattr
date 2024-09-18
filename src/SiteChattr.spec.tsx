@@ -1,6 +1,6 @@
 import { render, renderHook } from '@testing-library/react'
 import { useAtom } from 'jotai'
-import { SiteChattr } from './App'
+import { SiteChattr } from './SiteChattr'
 import { isLoggedInAtom } from './components/Login'
 
 describe('SiteChattr', () => {

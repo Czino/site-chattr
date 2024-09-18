@@ -4,10 +4,10 @@ export const event1: NostrEvent = {
     created_at: 1726584421,
     content: 'Home sweet home',
     tags: [
-        ['S', 'r:http://localhost:3000/'],
-        ['K', 'r:http://localhost:3000'],
-        ['s', 'r:http://localhost:3000/'],
-        ['k', 'r:http://localhost:3000'],
+        ['S', 'http://localhost:3000/'],
+        ['K', 'http://localhost:3000'],
+        ['s', 'http://localhost:3000/'],
+        ['k', 'http://localhost:3000'],
     ],
     kind: 1111,
     pubkey: '37264347030d919dc6735838d18d140cc315140af0684150a846318f7c1a7d59',
@@ -22,9 +22,9 @@ export const event2: NostrEvent = {
     pubkey: 'c446c97e0b3a2f5e1d33ba40664fa77b03b0afcba9684daf4f7925ae8f5c6fe0',
     sig: '46facb7a06e7d21f28f23867970c9357325f85239c3c57eeea4c1f5348c907e84cd26494f184e19a2e6d67f6c6c35b83414cefcd67c08a0c90d9e2779469fadd',
     tags: [
-        ['S', 'r:http://localhost:3000/'],
-        ['K', 'r:http://localhost:3000'],
-        ['s', 'r:http://localhost:3000/'],
-        ['k', 'r:http://localhost:3000'],
+        ['S', 'http://localhost:3000/'],
+        ['K', 'http://localhost:3000'],
+        ['s', 'http://localhost:3000/'],
+        ['k', 'http://localhost:3000'],
     ],
 }
