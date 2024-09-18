@@ -277,11 +277,17 @@ module.exports = {
             },
         },
         {
-            files: ['*.spec.tsx', '*.spec.ts'],
+            files: ['*.spec.tsx', '*.spec.ts', './test/data/*.ts'],
             rules: {
                 'no-magic-numbers': 'off',
                 'max-statements': ['error', 50],
                 'max-lines-per-function': ['error', 300],
+            },
+        },
+        {
+            files: ['./test/data/*.ts'],
+            rules: {
+                'max-len': 'off',
             },
         },
         {

@@ -1,6 +1,6 @@
 import { useNewEvent } from 'nostr-hooks'
 import { useCallback } from 'react'
-import { getDomain } from '../helpers/getDomain'
+import { getURLOrigin } from '../helpers/getURLOrigin'
 
 type Props = {
     content: string
@@ -12,7 +12,7 @@ export const usePostMessage = ({ content, url, onSuccess }: Props) => {
 
     const handlePublish = useCallback(async () => {
         const event = createNewEvent()
-        const domain = getDomain(url)
+        const domain = getURLOrigin(url)
         event.content = content
         event.kind = 1111
         event.tags = [

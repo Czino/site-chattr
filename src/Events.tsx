@@ -1,7 +1,7 @@
 import { useSubscribe } from 'nostr-hooks'
 import { useMemo } from 'react'
 import { Event } from './components/Event'
-import { getDomain } from './helpers/getDomain'
+import { getURLOrigin } from './helpers/getURLOrigin'
 
 const opts = {
     closeOnEose: false,
@@ -27,7 +27,7 @@ export const Events = ({ url }: Props) => {
             {
                 kinds: [GENERIC_COMMENT_KIND],
                 '#S': [`r:${url}`],
-                '#K': [`r:${getDomain(url)}`],
+                '#K': [`r:${getURLOrigin(url)}`],
             },
 
         ],
