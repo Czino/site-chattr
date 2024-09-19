@@ -36,4 +36,31 @@ describe('useCurrentUrl', () => {
         const [currentUrl] = result.current
         expect(currentUrl).toBe(href)
     })
+    it('should set current url on tab change', () => {
+        const url = 'https://othersite.com'
+        window.chrome = {
+            runtime: {
+                // @ts-ignore just a mock
+                onMessage: {
+                    addListener: jest.fn().mockImplementation((callback) => callback({ url })),
+                },
+            },
+        }
+        const { result } = renderHook(useCurrentUrl)
+        const [currentUrl] = result.current
+        expect(currentUrl).toBe(url)
+    })
+    it('should not set current url on tab change if url cannot be determined', () => {
+        window.chrome = {
+            runtime: {
+                // @ts-ignore just a mock
+                onMessage: {
+                    addListener: jest.fn().mockImplementation((callback) => callback({})),
+                },
+            },
+        }
+        const { result } = renderHook(useCurrentUrl)
+        const [currentUrl] = result.current
+        expect(currentUrl).toBe(href)
+    })
 })
