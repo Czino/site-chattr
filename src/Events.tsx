@@ -1,9 +1,10 @@
+import { NDKSubscriptionOptions } from '@nostr-dev-kit/ndk'
 import { useSubscribe } from 'nostr-hooks'
 import { useMemo } from 'react'
 import { Event } from './components/Event'
 import { getURLOrigin } from './helpers/getURLOrigin'
 
-const opts = {
+const opts: NDKSubscriptionOptions = {
     closeOnEose: false,
 }
 const relays = ['wss://nostr-pub.wellorder.net/', 'wss://nostr.bitcoiner.social', 'wss://relay.damus.io/']
@@ -22,8 +23,8 @@ export const Events = ({ url }: Props) => {
             },
             {
                 kinds: [NIP_73_KIND],
-                '#S': [`${url}`],
-                '#K': [`${getURLOrigin(url)}`],
+                '#S': [url],
+                '#K': [getURLOrigin(url)],
             },
         ],
         [url],
