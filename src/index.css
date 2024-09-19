@@ -19,23 +19,6 @@
     --foreground: var(--purple-900);
 }
 
-@media (prefers-color-scheme: dark) {
-    :host,
-    :root {
-        --purple-50: #4b1f6d;
-        --purple-100: #4b1f6d;
-        --purple-200: #4b1f6d;
-        --purple-300: #4b1f6d;
-        --purple-400: #4b1f6d;
-        --purple-500: #4b1f6d;
-        --purple-600: #6f2c91;
-        --purple-700: #a77bca;
-        --purple-800: #e0e7ff;
-        --purple-900: #f5f3ff;
-        --background: var(--purple-50);
-        --foreground: var(--purple-900);
-    }
-}
 
 #site-chattr,
 body {
