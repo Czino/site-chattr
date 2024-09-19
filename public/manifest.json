@@ -7,9 +7,7 @@
         "default_icon": "SiteChattr.png",
         "default_title": "Open SiteChattr"
     },
-    "permissions": [
-        "sidePanel", "activeTab", "tabs"
-    ],
+    "permissions": ["sidePanel", "activeTab", "tabs"],
     "side_panel": {
         "default_path": "index.html"
     },

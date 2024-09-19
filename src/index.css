@@ -19,7 +19,6 @@
     --foreground: var(--purple-900);
 }
 
-
 #site-chattr,
 body {
     color: var(--foreground);
