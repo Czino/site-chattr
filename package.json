@@ -22,9 +22,28 @@
         "react-scripts": "5.0.1",
         "typescript": "^4.9.5"
     },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@testing-library/jest-dom": "^6.5.0",
+        "@testing-library/react": "^16.0.1",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/chrome": "^0.0.271",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.108",
+        "@types/react": "^18.3.6",
+        "@types/react-dom": "^18.3.0",
+        "eventemitter3": "^5.0.1",
+        "postcss": "^8.4.47",
+        "serve": "^14.2.3",
+        "snapshot-diff": "^0.10.0",
+        "tailwindcss": "^3.4.11"
+    },
     "overrides": {
         "@nostr-dev-kit/ndk": {
-            "tseep": "npm:eventemitter3@5.0.1"
+            "tseep@1.1.1": "$eventemitter3"
+        },
+        "nostr-login": {
+            "tseep@1.2.1": "$eventemitter3"
         }
     },
     "browserslist": {
@@ -38,21 +57,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-        "@testing-library/jest-dom": "^6.5.0",
-        "@testing-library/react": "^16.0.1",
-        "@testing-library/user-event": "^14.5.2",
-        "@types/chrome": "^0.0.271",
-        "@types/jest": "^27.5.2",
-        "@types/node": "^16.18.108",
-        "@types/react": "^18.3.6",
-        "@types/react-dom": "^18.3.0",
-        "postcss": "^8.4.47",
-        "serve": "^14.2.3",
-        "snapshot-diff": "^0.10.0",
-        "tailwindcss": "^3.4.11"
     },
     "jest": {
         "resetMocks": false,
