@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SiteChattr",
     "description": "A browser plugin to add a chatroom to any web page powered by the nostr protocol",
-    "version": "1.0",
+    "version": "1.1",
     "action": {
         "default_icon": "SiteChattr.png",
         "default_title": "Open SiteChattr"
