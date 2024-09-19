@@ -1,13 +1,9 @@
 import NDK from '@nostr-dev-kit/ndk'
 import { useEffect, useState } from 'react'
+import { relays } from '../constants'
 
-export const explicitRelayUrls = [
-    'wss://nostr-pub.wellorder.net/',
-    'wss://nostr.bitcoiner.social',
-    'wss://relay.damus.io/',
-]
 export const useCustomNdk = () => {
-    const [customNdk, setCustomNdk] = useState<NDK>(new NDK({ explicitRelayUrls }))
+    const [customNdk, setCustomNdk] = useState<NDK>(new NDK({ explicitRelayUrls: relays }))
 
     useEffect(() => {
         customNdk.connect()
