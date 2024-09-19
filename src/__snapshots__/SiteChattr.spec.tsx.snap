@@ -20,10 +20,10 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
       </h2>
     </header>
     <main
-      class="flex flex-col gap-4 p-2 h-full"
+      class="flex flex-col flex-shrink gap-4 h-full"
     >
       <div
-        class="overflow-auto flex-shrink h-full"
+        class="overflow-auto flex-shrink p-2 h-full"
       >
         <div
           class="text-center text-purple-300"

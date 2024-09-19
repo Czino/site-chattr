@@ -3,7 +3,7 @@
 exports[`Textarea should render Textarea with styles 1`] = `
 <DocumentFragment>
   <textarea
-    class="resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    class="resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4"
   >
     Text
   </textarea>

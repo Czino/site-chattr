@@ -19,8 +19,8 @@ export const SiteChattr = () => {
                 <h1 className="text-purple-50">SiteChattr</h1>
                 <h2 className="overflow-x-auto text-purple-50">{getDisplayUrl(currentUrl)}</h2>
             </header>
-            <main className="flex flex-col gap-4 p-2 h-full">
-                <div className="overflow-auto flex-shrink h-full">
+            <main className="flex flex-col flex-shrink gap-4 h-full">
+                <div className="overflow-auto flex-shrink p-2 h-full">
                     <Events url={currentUrl} />
                 </div>
                 {isLoggedIn ? <MessageBox url={currentUrl} /> : <Login />}

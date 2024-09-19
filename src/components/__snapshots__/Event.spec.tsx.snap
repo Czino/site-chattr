@@ -5,7 +5,6 @@ exports[`Event should highlight event if note is from active user 1`] = `
 - First value
 + Second value
 
-@@ -1,12 +1,12 @@
   <DocumentFragment>
     <li
 -     class=\\"w-full rounded p-4 overflow-hidden flex flex-col gap-1 bg-highlight\\"
@@ -18,11 +17,6 @@ exports[`Event should highlight event if note is from active user 1`] = `
         rel=\\"noreferrer\\"
         target=\\"_blank\\"
       >
-        <div
-          class=\\"w-5 h-5 bg-purple-400 rounded-full\\"
-@@ -17,13 +17,13 @@
-          Anon
-        </p>
         <p
           class=\\"text-xs text-purple-400\\"
         >
@@ -49,14 +43,6 @@ exports[`Event should render correctly 1`] = `
       rel="noreferrer"
       target="_blank"
     >
-      <div
-        class="w-5 h-5 bg-purple-400 rounded-full"
-      />
-      <p
-        class="font-bold"
-      >
-        Anon
-      </p>
       <p
         class="text-xs text-purple-400"
       >
@@ -75,7 +61,7 @@ exports[`Event should render profile image 1`] = `
 - First value
 + Second value
 
-@@ -6,14 +6,12 @@
+@@ -6,20 +6,10 @@
         class=\\"flex gap-1 items-center leading-5\\"
         href=\\"https://njump.me/npub1xunyx3crpkgem3nntqudrrg5pnp329q27p5yz59ggccc7lq604vsan554l\\"
         rel=\\"noreferrer\\"
@@ -83,13 +69,17 @@ exports[`Event should render profile image 1`] = `
       >
 -       <img
 -         alt=\\"\\"
--         class=\\"w-5 h-5 rounded-full\\"
+-         class=\\"w-5 h-5 bg-purple-50 rounded-full\\"
 -         src=\\"url/to/image.png\\"
-+       <div
-+         class=\\"w-5 h-5 bg-purple-400 rounded-full\\"
-        />
+-       />
+-       <p
+-         class=\\"font-bold\\"
+-       >
+-         Anon
+-       </p>
         <p
-          class=\\"font-bold\\"
+          class=\\"text-xs text-purple-400\\"
         >
-          Anon"
+          9/17/2024, 2:47:01 PM
+        </p>"
 `;

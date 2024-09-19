@@ -34,14 +34,6 @@ exports[`Events should render messages 1`] = `
         rel="noreferrer"
         target="_blank"
       >
-        <div
-          class="w-5 h-5 bg-purple-400 rounded-full"
-        />
-        <p
-          class="font-bold"
-        >
-          Anon
-        </p>
         <p
           class="text-xs text-purple-400"
         >
@@ -61,14 +53,6 @@ exports[`Events should render messages 1`] = `
         rel="noreferrer"
         target="_blank"
       >
-        <div
-          class="w-5 h-5 bg-purple-400 rounded-full"
-        />
-        <p
-          class="font-bold"
-        >
-          Anon
-        </p>
         <p
           class="text-xs text-purple-400"
         >

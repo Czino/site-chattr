@@ -5,39 +5,76 @@ exports[`MessageBox should publish event and clear text after 1`] = `
 - First value
 + Second value
 
-@@ -1,13 +1,11 @@
-  <DocumentFragment>
-    <textarea
-      class=\\"resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500\\"
-      id=\\"textarea\\"
-      placeholder=\\"Your message...\\"
--   >
--     my comment!
--   </textarea>
-+   />
-    <button
-      class=\\"bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark \\"
-    >
-      Send
-    </button>"
+@@ -7,14 +7,11 @@
+      >
+        <textarea
+          class=\\"resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink pr-12 w-full\\"
+          id=\\"textarea\\"
+          placeholder=\\"Your message...\\"
+-         style=\\"height: 0px;\\"
+-       >
+-         my comment!
+-       </textarea>
++       />
+        <button
+          aria-label=\\"Send\\"
+          class=\\"bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark flex absolute right-3 bottom-3 justify-center items-center p-0 w-10 h-10 rounded-full\\"
+        >
+          <svg"
 `;
 
 exports[`MessageBox should publish event and clear text after 2`] = `
 "Snapshot Diff:
-Compared values have no visual difference."
+- First value
++ Second value
+
+@@ -7,11 +7,10 @@
+      >
+        <textarea
+          class=\\"resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink pr-12 w-full\\"
+          id=\\"textarea\\"
+          placeholder=\\"Your message...\\"
+-         style=\\"height: 0px;\\"
+        />
+        <button
+          aria-label=\\"Send\\"
+          class=\\"bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark flex absolute right-3 bottom-3 justify-center items-center p-0 w-10 h-10 rounded-full\\"
+        >"
 `;
 
 exports[`MessageBox should render correctly 1`] = `
 <DocumentFragment>
-  <textarea
-    class="resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    id="textarea"
-    placeholder="Your message..."
-  />
-  <button
-    class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+  <div
+    class="flex flex-col gap-2"
   >
-    Send
-  </button>
+    <div
+      class="flex flex-row flex-nowrap gap-2 items-end p-2"
+    >
+      <textarea
+        class="resize-none border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink pr-12 w-full"
+        id="textarea"
+        placeholder="Your message..."
+      />
+      <button
+        aria-label="Send"
+        class="bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark flex absolute right-3 bottom-3 justify-center items-center p-0 w-10 h-10 rounded-full"
+      >
+        <svg
+          class="w-7 h-7 relative left-[2px]"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M48 448l416-192L48 64v149.333L346 256 48 298.667z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
 </DocumentFragment>
 `;

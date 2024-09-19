@@ -24,7 +24,7 @@ describe('MessageBox', () => {
         const { asFragment } = render(<MessageBox url={url} />)
         await userEvent.type(screen.getByPlaceholderText('Your message...'), message)
         expect(asFragment()).toMatchDiffSnapshot(base)
-        await userEvent.click(screen.getByText('Send'))
+        await userEvent.click(screen.getByLabelText('Send'))
         expect(mockEvent.publish).toHaveBeenCalled()
         expect(mockEvent.content).toEqual(message)
         expect(asFragment()).toMatchDiffSnapshot(base)

@@ -1,11 +1,8 @@
 import { NDKEvent } from '@nostr-dev-kit/ndk'
+import { GATEWAY, MS_PER_S } from '../constants'
 import { useIsSelf } from '../hooks/useIsSelf'
+import { ProfileInline } from './ProfileInline'
 
-const DEFAULTS = {
-    USER_NAME: 'Anon',
-}
-const MS_PER_S = 1000
-const GATEWAY = 'https://njump.me/'
 export const Event = ({ event }: { event: NDKEvent }) => {
     const isSelf = useIsSelf()
 
@@ -22,12 +19,7 @@ export const Event = ({ event }: { event: NDKEvent }) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                {event.author.profile?.image ? (
-                    <img src={event.author.profile?.image} alt="" className="w-5 h-5 rounded-full" />
-                ) : (
-                    <div className="w-5 h-5 bg-purple-400 rounded-full"></div>
-                )}
-                <p className="font-bold">{event.author.profile?.displayName || DEFAULTS.USER_NAME}</p>
+                {!!event.author.profile && <ProfileInline profile={event.author.profile} />}
                 {!!event.created_at && (
                     <p className="text-xs text-purple-400">{new Date(event.created_at * MS_PER_S).toLocaleString()}</p>
                 )}

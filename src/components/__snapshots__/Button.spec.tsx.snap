@@ -7,8 +7,8 @@ exports[`Button should render Button with styles 1`] = `
 
   <DocumentFragment>
     <button
--     class=\\"mt-4\\"
-+     class=\\"bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark \\"
+-     class=\\"bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark mt-4\\"
++     class=\\"bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark \\"
     >
       Test
     </button>
@@ -18,7 +18,7 @@ exports[`Button should render Button with styles 1`] = `
 exports[`Button should render correctly 1`] = `
 <DocumentFragment>
   <button
-    class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+    class="bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark "
   >
     Test
   </button>

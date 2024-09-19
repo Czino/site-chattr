@@ -3,7 +3,7 @@ import { ChangeEvent, TextareaHTMLAttributes } from 'react'
 type Props = TextareaHTMLAttributes<HTMLTextAreaElement> & {
     onTextChange?: (value: string) => void
 }
-export const Textarea = ({ onTextChange, ...props }: Props) => {
+export const Textarea = ({ onTextChange, className, ...props }: Props) => {
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         if (onTextChange) onTextChange(event.target.value)
     }
@@ -12,8 +12,9 @@ export const Textarea = ({ onTextChange, ...props }: Props) => {
             {...props}
             onChange={handleChange}
             className={[
-                'resize-none border border-gray-300 rounded-md p-2 flex-shrink-0',
+                'resize-none border border-gray-300 rounded-md p-2',
                 'focus:outline-none focus:ring-2 focus:ring-blue-500',
+                className,
             ].join(' ')}
         />
     )
