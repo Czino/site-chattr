@@ -60,7 +60,7 @@ exports[`MessageBox should render correctly 1`] = `
         class="bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark flex absolute right-3 bottom-3 justify-center items-center p-0 w-10 h-10 rounded-full"
       >
         <svg
-          class="w-7 h-7 relative left-[2px]"
+          class="w-7 h-7 relative left-[2px] flex-shrink-0"
           fill="currentColor"
           height="1em"
           stroke="currentColor"

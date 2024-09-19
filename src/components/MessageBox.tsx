@@ -34,7 +34,7 @@ export const MessageBox = ({ url }: Props) => {
                     aria-label="Send"
                     className="flex absolute right-3 bottom-3 justify-center items-center p-0 w-10 h-10 rounded-full"
                 >
-                    <IoMdSend className="w-7 h-7 relative left-[2px]" />
+                    <IoMdSend className="w-7 h-7 relative left-[2px] flex-shrink-0" />
                 </Button>
             </div>
         </div>
