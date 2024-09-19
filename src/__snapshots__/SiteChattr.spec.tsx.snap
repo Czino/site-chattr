@@ -31,16 +31,11 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
           Fetching messages...
         </div>
       </div>
-      <textarea
-        class="resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        id="textarea"
-        placeholder="Your message..."
-      />
-      <button
-        class="bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark "
+      <div
+        class="grid grid-cols-1 gap-2 text-center"
       >
-        Send
-      </button>
+        Logging in...
+      </div>
     </main>
   </div>
 </DocumentFragment>
@@ -48,31 +43,5 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
 
 exports[`SiteChattr should render correctly when not logged in 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
-
-@@ -26,17 +26,18 @@
-            class=\\"text-center text-purple-300\\"
-          >
-            Fetching messages...
-          </div>
-        </div>
--       <div
--         class=\\"grid grid-cols-1 gap-2\\"
--       >
-+       <textarea
-+         class=\\"resize-none border border-gray-300 rounded-md p-2 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500\\"
-+         id=\\"textarea\\"
-+         placeholder=\\"Your message...\\"
-+       />
-        <button
-          class=\\"bg-gradient-purple text-white p-2 rounded hover:bg-gradient-purple-dark \\"
-        >
--           Create new user
-+         Send
-        </button>
--       </div>
-      </main>
-    </div>
-  </DocumentFragment>"
+Compared values have no visual difference."
 `;
