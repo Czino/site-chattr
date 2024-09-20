@@ -1,5 +1,5 @@
 const config = {
-    content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './public/*.html'],
     darkMode: 'class',
     theme: {
         extend: {
