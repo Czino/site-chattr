@@ -5,25 +5,25 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
   <div
     class="flex flex-col gap-4 h-full"
   >
-    <header
-      class="p-2 text-center bg-purple-400"
-    >
-      <h1
-        class="text-purple-50"
-      >
-        SiteChattr
-      </h1>
-      <h2
-        class="overflow-x-auto text-purple-50"
-      >
-        localhost/
-      </h2>
-    </header>
     <main
-      class="flex flex-col flex-shrink gap-4 h-full"
+      class="flex flex-col flex-shrink gap-2 h-full"
     >
+      <header
+        class="sticky top-0 p-2 text-center bg-purple-400"
+      >
+        <h1
+          class="text-purple-50"
+        >
+          SiteChattr
+        </h1>
+        <h2
+          class="overflow-x-auto text-purple-50"
+        >
+          localhost/
+        </h2>
+      </header>
       <div
-        class="overflow-auto flex-shrink p-2 h-full"
+        class="overflow-auto flex-shrink px-2 h-full"
       >
         <div
           class="text-center text-purple-300"
@@ -34,7 +34,11 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
       <div
         class="grid grid-cols-1 gap-2 text-center"
       >
-        Logging in...
+        <button
+          class="bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark "
+        >
+          Login
+        </button>
       </div>
     </main>
   </div>

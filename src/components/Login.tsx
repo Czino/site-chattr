@@ -2,6 +2,7 @@ import { atom, useAtom } from 'jotai'
 import { useLogin } from 'nostr-hooks'
 import { init as initNostrLogin } from 'nostr-login'
 import { useEffect } from 'react'
+import { Button } from './Button'
 
 export const isLoggedInAtom = atom(false)
 
@@ -24,5 +25,12 @@ export const Login = () => {
         })
     })
 
-    return <div className="grid grid-cols-1 gap-2 text-center">Logging in...</div>
+    const launchLogin = () => {
+        document.dispatchEvent(new CustomEvent('nlLaunch', { detail: 'welcome' }))
+    }
+    return (
+        <div className="grid grid-cols-1 gap-2 text-center">
+            <Button onClick={launchLogin}>Login</Button>
+        </div>
+    )
 }

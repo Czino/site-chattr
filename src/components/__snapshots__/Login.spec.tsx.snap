@@ -5,7 +5,11 @@ exports[`Login should render correctly 1`] = `
   <div
     class="grid grid-cols-1 gap-2 text-center"
   >
-    Logging in...
+    <button
+      class="bg-gradient-purple text-white p-4 text-xl uppercase font-bold rounded hover:bg-gradient-purple-dark "
+    >
+      Login
+    </button>
   </div>
 </DocumentFragment>
 `;

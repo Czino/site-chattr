@@ -1,4 +1,5 @@
-import { act, render, renderHook } from '@testing-library/react'
+import { act, render, renderHook, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { useAtom } from 'jotai'
 import { mockLoginWithExtension, mockLogout } from '../setupTests'
 import { isLoggedInAtom, Login } from './Login'
@@ -22,13 +23,20 @@ describe('Login', () => {
 
         expect(base).toMatchSnapshot()
     })
+    it('should call launch login on button click', async () => {
+        const nlLaunch = jest.fn()
+        document.addEventListener('nlLaunch', nlLaunch)
+        render(<Login />)
+        await userEvent.click(screen.getByText('Login'))
+        expect(nlLaunch).toHaveBeenCalled()
+    })
     it('should call nostr login', () => {
         render(<Login />)
         expect(mockInit).toHaveBeenCalled()
     })
     it('should login with extension on auth', () => {
         render(<Login />)
-        mockInit.mock.calls[0][0].onAuth()
+        act(mockInit.mock.calls[0][0].onAuth)
         expect(mockLoginWithExtension).toHaveBeenCalled()
         const { result } = renderHook(useAtom, { initialProps: isLoggedInAtom })
         expect(result.current[0]).toBeTruthy()

@@ -16,7 +16,7 @@ export const MessageBox = ({ url }: Props) => {
 
     return (
         <div className="flex flex-col gap-2">
-            <div className="flex flex-row flex-nowrap gap-2 items-end p-2">
+            <div className="flex flex-row flex-nowrap gap-2 items-end">
                 <Textarea
                     className="flex-shrink pr-12 w-full"
                     id="textarea"
