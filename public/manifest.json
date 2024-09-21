@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SiteChattr",
     "description": "A browser plugin to add a chatroom to any web page powered by the nostr protocol",
-    "version": "1.2",
+    "version": "1.3",
     "browser_specific_settings": {
         "gecko": {
             "id": "sitechattr@czino.de"
