@@ -19,7 +19,7 @@ export const useURLEvents = ({ url }: Props) => {
             },
             {
                 kinds: [NIP_73_KIND],
-                '#S': [url],
+                '#I': [url],
                 '#K': [getURLOrigin(url)],
             },
         ],

@@ -18,7 +18,7 @@ describe('Events', () => {
                 },
                 {
                     '#K': ['https://localhost:3000'],
-                    '#S': ['https://localhost:3000/'],
+                    '#I': ['https://localhost:3000/'],
                     kinds: [1111],
                 },
             ],
