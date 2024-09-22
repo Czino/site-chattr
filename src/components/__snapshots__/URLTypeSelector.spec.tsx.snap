@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`URLTypeSelector should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row"
+  >
+    <button
+      class="relative p-4 w-full font-bold text-center uppercase bg-purple-50"
+    >
+      Page
+      <div
+        class="absolute right-0 bottom-0 left-0 w-full h-1 bg-highlight"
+      />
+    </button>
+    <button
+      class="relative p-4 w-full font-bold text-center uppercase bg-purple-50"
+    >
+      Site
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`URLTypeSelector should select site render correctly 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -4,16 +4,16 @@
+    >
+      <button
+        class=\\"relative p-4 w-full font-bold text-center uppercase bg-purple-50\\"
+      >
+        Page
++       <div
++         class=\\"absolute right-0 bottom-0 left-0 w-full h-1 bg-highlight\\"
++       />
+      </button>
+      <button
+        class=\\"relative p-4 w-full font-bold text-center uppercase bg-purple-50\\"
+      >
+        Site
+-       <div
+-         class=\\"absolute right-0 bottom-0 left-0 w-full h-1 bg-highlight\\"
+-       />
+      </button>
+    </div>
+  </DocumentFragment>"
+`;

@@ -6,7 +6,7 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
     class="flex flex-col gap-4 h-full"
   >
     <main
-      class="flex flex-col flex-shrink gap-2 h-full"
+      class="flex flex-col flex-shrink h-full"
     >
       <header
         class="sticky top-0 p-2 text-center bg-purple-400"
@@ -23,7 +23,24 @@ exports[`SiteChattr should render correctly when logged in 1`] = `
         </h2>
       </header>
       <div
-        class="overflow-auto flex-shrink px-2 h-full"
+        class="flex flex-row"
+      >
+        <button
+          class="relative p-4 w-full font-bold text-center uppercase bg-purple-50"
+        >
+          Page
+          <div
+            class="absolute right-0 bottom-0 left-0 w-full h-1 bg-highlight"
+          />
+        </button>
+        <button
+          class="relative p-4 w-full font-bold text-center uppercase bg-purple-50"
+        >
+          Site
+        </button>
+      </div>
+      <div
+        class="overflow-auto flex-shrink p-2 h-full"
       >
         <div
           class="text-center text-purple-300"

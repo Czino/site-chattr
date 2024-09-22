@@ -46,13 +46,7 @@ module.exports = {
                 functions: 'always-multiline',
             },
         ],
-        'comma-spacing': [
-            'error',
-            {
-                after: true,
-                before: false,
-            },
-        ],
+        'comma-spacing': 'off',
         'comma-style': ['error', 'last'],
         complexity: ['error', 21],
         'computed-property-spacing': 'error',

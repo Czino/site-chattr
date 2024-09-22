@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="sticky top-0 p-2 text-center bg-purple-400"
+  >
+    <h1
+      class="text-purple-50"
+    >
+      SiteChattr
+    </h1>
+    <h2
+      class="overflow-x-auto text-purple-50"
+    >
+      localhost/
+    </h2>
+  </header>
+</DocumentFragment>
+`;
